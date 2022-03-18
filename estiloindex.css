@@ -1,0 +1,78 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #F6E1E8;
+    background-image: url("assets/Fondo.png");
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.headerr {
+    margin: 0%;
+    padding: 0%;
+    background-color: #ef9597;
+    width: 100vw;
+    height: 70px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.encabezado{
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ef9597;
+    position: fixed;
+}
+
+.argprog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-left: 20px;
+}
+
+.logo{
+    height: 70px;
+    margin-left: 20px;
+    position: relative;
+}
+
+#palabrasheader{
+    color: #F6E1E8;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Poppins",sans-serif;
+    margin-left: 10px;
+}
+
+.linea {
+    color: #F6E1E8;
+    height: 30px;
+    border: 1px solid #F6E1E8;
+}
+
+.switches{
+    margin-right: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.icons{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    color: #F6E1E8;
+}
+
+.icons:hover {
+    transform: scale(1.1);
+}
