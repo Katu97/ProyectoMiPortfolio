@@ -1,31 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Sofia Katuchin</title>
     <link rel="stylesheet" href="estiloindex.css"/>
-    <script src="app.js"></script>
     <script src="https://kit.fontawesome.com/96c421b159.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <header class="headerr">
-        <div class="encabezado">
+<body class="dark">
+    <header class="header">
+        <nav class="encabezado">
             <div class="argprog">
-                <a href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img class="logo" src="assets/APLogo.png" alt="logo Argentina Programa"></a>
+                <a href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img id="toggle-logoAP" class="logo" src="assets/APLogorosa.png" alt="logo Argentina Programa"></a>
                 <div><i class="fa-solid fa-pipe linea"></i></div>
                 <span id="palabrasheader">#YoProgramo</span>
             </div>
+            <div class="menu">
+                <ul class="menulista">
+                    <li><a class="menu_items" href="#">Inicio</a></li>
+                    <li><a class="menu_items" href="#">Sobre mi</a></li>
+                    <li><a class="menu_items" href="#">Educación</a></li>
+                    <li><a class="menu_items" href="#">Hards Skills & Soft Skills</a></li>
+                    <li><a class="menu_items" href="#">Experiencia</a></li>
+                    <li><a class="menu_items" href="https://www.webcodzing.com/">Proyectos</a></li>
+                </ul>
+            </div>
             <div class="switches">
-                <div class="toggle-thin">
-                    <img class="icons" src="assets/luna-creciente.png" alt="Luna modo oscuro">
-                    <img class="icons" src="assets/abajo.png" alt="Menu despegable">
+                <div id="toggle-theme" class="toggle-theme">
+                    <img id="toggle-theme_icons" src="assets/luna-creciente.png" class="toggle-theme_icons">
                 </div>
                 
             </div>
+        </nav>
+        <div class="introduccion">
+            <img id="avatar" src="assets/ReadyPlayerMe-Avatar2.png" alt="Avatar Sofia Katuchin">
+            <div>
+                <p class="introduccion-fuente">Desarrollador Full Stack Junior</p>
+            </div>
         </div>
     </header>
-    <img src="assets/ReadyPlayerMe-Avatar2.png" alt="Avatar Sofia Katuchin">
+    <main>
+
+    </main>
+    <script src="app.js"></script>
 </body>
 </html>
