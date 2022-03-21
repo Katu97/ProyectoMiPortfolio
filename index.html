@@ -6,24 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Sofia Katuchin</title>
     <link rel="stylesheet" href="estiloindex.css"/>
+    <link rel="stylesheet" href="estilomain.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comforter&family=Oswald&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/96c421b159.js" crossorigin="anonymous"></script>
 </head>
 <body class="dark">
+    <!-----------HEADER----------->
     <header class="header">
-        <nav class="encabezado">
+        <div class="encabezado">
             <div class="argprog">
                 <a href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img id="toggle-logoAP" class="logo" src="assets/APLogorosa.png" alt="logo Argentina Programa"></a>
                 <div><i class="fa-solid fa-pipe linea"></i></div>
                 <span id="palabrasheader">#YoProgramo</span>
             </div>
             <div class="menu">
-                <ul class="menulista">
-                    <li><a class="menu_items" href="#">Inicio</a></li>
-                    <li><a class="menu_items" href="#">Sobre mi</a></li>
-                    <li><a class="menu_items" href="#">Educación</a></li>
-                    <li><a class="menu_items" href="#">Hards Skills & Soft Skills</a></li>
-                    <li><a class="menu_items" href="#">Experiencia</a></li>
-                    <li><a class="menu_items" href="https://www.webcodzing.com/">Proyectos</a></li>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#sobremi">Sobre mi</a></li>
+                    <li><a href="#educacion">Educación</a></li>
+                    <li><a href="#skills">Hards Skills & Soft Skills</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
                 </ul>
             </div>
             <div class="switches">
@@ -32,16 +35,52 @@
                 </div>
                 
             </div>
-        </nav>
-        <div class="introduccion">
-            <img id="avatar" src="assets/ReadyPlayerMe-Avatar2.png" alt="Avatar Sofia Katuchin">
-            <div>
-                <p class="introduccion-fuente">Desarrollador Full Stack Junior</p>
+        </div>
+        <div class="inicio">
+            <div id="avatar">
+                <img id="avatar-image" src="assets/ReadyPlayerMe-Avatar2.png" alt="Avatar Sofia Katuchin">
+            </div>
+            <div class="inicio-escritura">
+                <p class="inicio-saludo">Hola, soy Sofía</p>
+                <p class="inicio-descripcion">Desarrollador Full Stack Junior</p>
             </div>
         </div>
     </header>
+    <!-----------MAIN------------>
     <main>
-
+        <!--SOBRE MI-->
+        <section id="sobremi" class="SobreMi margenes">
+            <div class="SobreMi-descripcion">
+                <div>
+                    <h1 class="titulos">Sobre mi</h1>
+                </div>
+                <div>
+                    <p class="parrafos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam velit doloremque vitae quia error voluptatibus sed praesentium. Sapiente asperiores vero animi, amet, optio quisquam et assumenda reprehenderit fuga voluptas eligendi!</p>
+                </div>
+                <div class="bottom">
+                    <button class="buttom_cv"><a target="_blank" href="https://drive.google.com/file/d/1QCGzg6Zl6ayg8vbhCusw3uplPnC6TAjK/view?usp=sharing">Descargar CV</a></button>
+                </div>
+            </div>
+            <div>
+                <img id="toggle-perfil" class="SobreMi-perfil" src="assets/perfillight.png" alt="Foto de perfil">
+            </div>
+        </section>
+        <!--EDUCACION--> 
+        <section id="educacion" class="Educacion margenes">
+            <h1 class="titulos">Mi formación</h1>
+        </section>
+        <!--SKILLS-->
+        <section id="skills" class="Skills margenes">
+            <h1 class="titulos">Hards skills & Soft Skills</h1>
+        </section>
+        <!--EXPERIENCIA-->
+        <section id="experiencia" class="Experiencia margenes">
+            <h1 class="titulos">Mis Experiencias</h1>
+        </section>
+        <!--PROYECTOS-->
+        <section id="proyectos" class="Proyectos margenes">
+            <h1 class="titulos">Mis Proyectos</h1>
+        </section>
     </main>
     <script src="app.js"></script>
 </body>

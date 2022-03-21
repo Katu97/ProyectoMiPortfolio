@@ -1,0 +1,75 @@
+main{
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+.margenes{
+    margin: 5px; 
+    padding: 5px;
+    height: 100vh;
+    width: 100%;
+}
+
+.SobreMi{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.SobreMi-descripcion{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 50vw;
+}
+
+.SobreMi-perfil{
+    max-width: 500px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.titulos{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 300%;
+}
+
+.parrafos{
+    max-width: 600px;
+    min-width: 300px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 150%;
+    text-align: justify;
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+}
+
+.buttom_cv{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 3px outset var(--bg-color-header);
+    border-radius: 10px;
+    background-color: var(--bg-color-header);
+    transition: var(--transition);
+}
+
+.buttom_cv:hover{
+    transform: scale(1.1);
+}
+
+.buttom_cv a{
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 180%;
+    user-select: none;
+    color: var(--text-color-body);
+    transition: var(--transition);
+}
