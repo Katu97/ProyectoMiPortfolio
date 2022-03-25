@@ -15,6 +15,7 @@
 
 body{
     max-width: 100%;
+    max-height: 100%;
     background-color: var(--bg-color-body);
     color: var(--text-color-body);
     transition: var(--transition);
@@ -34,19 +35,21 @@ body.dark{
     margin: 0%;
     padding: 0%;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-flow: column wrap;
     background: var(--bg-image);
     background-repeat: no-repeat;
     background-size: cover;
     transition: var(--transition);
+    position: relative;
 }
 
 .encabezado{
     height: 70px;
     width: 100%;
     position: fixed;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -68,7 +71,6 @@ body.dark{
 .logo{
     height: 50px;
     margin-left: 20px;
-    position: relative;
 }
 
 #palabrasheader{
@@ -87,17 +89,29 @@ body.dark{
 }
 
 .switches{
-    margin-right: 45px;
+    margin-right: 10px;
+    width: 4%;
     display: flex;
     align-items: center;
     align-content: center;
-    justify-content: space-evenly;
+    justify-items: center;
+    justify-content: space-around;
+    z-index: 60;
+}
+
+.toggle-theme{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 .toggle-theme_icons{
-    height: 20px;
-    width: 20px;
-    cursor: pointer;    
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 10px;    
 }
 
 .toggle-theme_icons:hover {
@@ -107,25 +121,21 @@ body.dark{
 .menu{
     display: flex;
     align-items: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
     margin: 0px;
     padding: 0px;
 }
 
-.menu ul{
+.menu nav ul{
     list-style: none;
 }
 
-.menu ul li {
+.menu nav ul li {
     display: inline;
 }
 
-.menu ul li a{
+.menu nav ul li a{
     text-decoration: none;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 5px 10px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     color: var(--text-color-header);
@@ -133,15 +143,28 @@ body.dark{
     transition: var(--transition);
 }
 
-.menu ul li a:hover {
+.menu nav ul li a:focus {
+    color: var(--text-color-body) !important;
+}
+
+.menu nav ul li a:hover {
     color: var(--text-color-body);
+    transition: var(--transition);
+}
+
+#bt_menu{
+    display: none;
+}
+
+#btn_menu{
+    display: none;
 }
 
 .inicio {
     display: flex;
     flex-grow: 3;
     margin-top: 70px;
-    justify-content: space-around;
+    justify-content: center;
     padding: 0 2vw;
 }
 
@@ -182,6 +205,153 @@ body.dark{
 }
 
 #avatar-image{
-    max-width: 600px;
+    width: 600px;
     user-select: none;
+}
+
+/* Index Responsive*/
+
+@media screen and (max-width:1200px) {
+    
+    .logo{
+        width: 120px;
+        margin-left: 10px;
+    }
+    
+    #palabrasheader{
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width:1070px) {
+    
+    .header {
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .menu nav{
+        position: fixed;
+        z-index: 80;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        background-color: var(--bg-color-header);
+        user-select: none;
+        transition: var(--transition);
+        transition: all 300ms !important;
+    }
+
+    .menu nav ul{
+        margin-top: 50px;
+    }
+
+    .menu nav ul li{
+        display: block;
+        margin-bottom: 30px;
+        margin-left: 20px;
+    }
+
+    .menu nav ul li a{
+        margin: 0;
+        cursor: pointer;
+        background-color: var(--bg-color-header);
+        transition: var(--transition);
+    }
+
+    #avatar-image{
+        width: 450px;
+    }
+
+    .inicio-saludo{
+        font-size: 70px;
+    }
+    
+    .inicio-descripcion {
+        font-size: x-large;
+    }
+
+    #back_menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+    }
+
+    .switches{
+        width: 10%;
+        align-items: center;
+        justify-content: space-evenly;
+        user-select: none;
+    }
+
+    #bt_menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+    }
+
+    #btn_menu{
+        display: flex;
+        color: var(--bg-color-header);
+        background-color: var(--text-color-header);
+        border-radius: 15px;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        cursor: pointer;
+        user-select: none;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        /* Con font-size controlo el tamaño del icono*/
+    }
+
+    #btn_menu:hover{
+        transform: scale(1.1);
+    }
+
+}
+
+@media screen and (max-width:720px) {
+    
+    .argprog span{
+        display: none;
+    }
+
+    .switches{
+        margin-right: 20px;
+    }
+
+    .inicio{
+        width: 100%;
+        height: 100%;
+        padding: 0%;
+        margin: 0%;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    #avatar{
+        justify-content: center;
+    }
+
+    #avatar-image{
+        width: 350px;
+    }
+
+    .inicio-saludo{
+        font-size: 50px;
+    }
+    
+    .inicio-descripcion {
+        font-size: large;
+    }
+    
 }

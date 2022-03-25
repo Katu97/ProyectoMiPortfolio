@@ -1,5 +1,6 @@
 main{
     max-width: 100%;
+    max-height: 100%;
     margin: 0;
     padding: 20px;
 }
@@ -55,14 +56,15 @@ main{
 .buttom_cv{
     margin-top: 20px;
     padding: 10px 20px;
-    border: 3px outset var(--bg-color-header);
-    border-radius: 10px;
-    background-color: var(--bg-color-header);
+    border: 1px solid var(--bg-color-header);
+    border-radius: 30px;
+    background: linear-gradient(to right, var(--text-color-header), var(--bg-color-header));
     transition: var(--transition);
 }
 
 .buttom_cv:hover{
     transform: scale(1.1);
+    box-shadow: 2px 2px 2px 2px var(--text-color-body);
 }
 
 .buttom_cv a{

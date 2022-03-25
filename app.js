@@ -1,3 +1,5 @@
+/*    DARK MODE    */
+
 const toggleTheme = document.getElementById("toggle-theme");
 const toggleIcon = document.getElementById("toggle-theme_icons");
 const toggleLogo = document.getElementById("toggle-logoAP");
@@ -21,3 +23,29 @@ toggleTheme.addEventListener("click", () => {
         togglePerfil.src="assets/perfillight.png";
     }
 });
+
+/*   MENU DESPEGABLE   */
+
+const nav = document.getElementById("nav");
+const background_menu = document.getElementById("back_menu");
+
+document.getElementById("btn_menu").addEventListener("click", mostrar_menu);
+document.getElementById("back_menu").addEventListener("click", ocultar_menu);
+
+function mostrar_menu(){
+    nav.style.right = "0px";
+    background_menu.style.display = "block";
+}
+
+function ocultar_menu(){
+    nav.style.right = "-200px";
+    background_menu.style.display = "none";
+}
+
+/*    MENU SELECCIONADO    
+
+const active = document.getElementsByClassName("active");
+
+active.addEventListener("click",() => {
+    document.menu.nav.ul.li.a.classList.toggle("selected");
+});*/

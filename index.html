@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Sofia Katuchin</title>
-    <link rel="stylesheet" href="estiloindex.css"/>
-    <link rel="stylesheet" href="estilomain.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comforter&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estiloindex.css" />
+    <link rel="stylesheet" href="estilomain.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comforter&family=Oswald&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/96c421b159.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="dark">
     <!-----------HEADER----------->
     <header class="header">
         <div class="encabezado">
             <div class="argprog">
-                <a href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img id="toggle-logoAP" class="logo" src="assets/APLogorosa.png" alt="logo Argentina Programa"></a>
+                <a href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img id="toggle-logoAP" class="logo"
+                        src="assets/APLogorosa.png" alt="logo Argentina Programa"></a>
                 <div><i class="fa-solid fa-pipe linea"></i></div>
                 <span id="palabrasheader">#YoProgramo</span>
             </div>
             <div class="menu">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#sobremi">Sobre mi</a></li>
-                    <li><a href="#educacion">Educación</a></li>
-                    <li><a href="#skills">Hards Skills & Soft Skills</a></li>
-                    <li><a href="#experiencia">Experiencia</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                </ul>
+                <div id="back_menu">
+                </div>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#sobremi">Sobre mi</a></li>
+                        <li><a href="#educacion">Educación</a></li>
+                        <li><a href="#skills">Hards Skills & Soft Skills</a></li>
+                        <li><a href="#experiencia">Experiencia</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                    </ul>
+                </nav>
             </div>
             <div class="switches">
-                <div id="toggle-theme" class="toggle-theme">
-                    <img id="toggle-theme_icons" src="assets/luna-creciente.png" class="toggle-theme_icons">
+                <div id="bt_menu">
+                    <i class="fa-solid fa-bars" id="btn_menu"></i>
                 </div>
-                
+                <div id="toggle-theme" class="toggle-theme">
+                    <img id="toggle-theme_icons" src="assets/luna-creciente.png" class="toggle-theme_icons"
+                        alt="Modo oscuro">
+                </div>
+
             </div>
         </div>
         <div class="inicio">
@@ -55,17 +67,21 @@
                     <h1 class="titulos">Sobre mi</h1>
                 </div>
                 <div>
-                    <p class="parrafos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam velit doloremque vitae quia error voluptatibus sed praesentium. Sapiente asperiores vero animi, amet, optio quisquam et assumenda reprehenderit fuga voluptas eligendi!</p>
+                    <p class="parrafos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam velit doloremque
+                        vitae quia error voluptatibus sed praesentium. Sapiente asperiores vero animi, amet, optio
+                        quisquam et assumenda reprehenderit fuga voluptas eligendi!</p>
                 </div>
                 <div class="bottom">
-                    <button class="buttom_cv"><a target="_blank" href="https://drive.google.com/file/d/1QCGzg6Zl6ayg8vbhCusw3uplPnC6TAjK/view?usp=sharing">Descargar CV</a></button>
+                    <button class="buttom_cv"><a target="_blank"
+                            href="https://drive.google.com/file/d/1QCGzg6Zl6ayg8vbhCusw3uplPnC6TAjK/view?usp=sharing">Descargar
+                            CV</a></button>
                 </div>
             </div>
             <div>
                 <img id="toggle-perfil" class="SobreMi-perfil" src="assets/perfillight.png" alt="Foto de perfil">
             </div>
         </section>
-        <!--EDUCACION--> 
+        <!--EDUCACION-->
         <section id="educacion" class="Educacion margenes">
             <h1 class="titulos">Mi formación</h1>
         </section>
@@ -84,4 +100,5 @@
     </main>
     <script src="app.js"></script>
 </body>
+
 </html>
