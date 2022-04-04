@@ -1,10 +1,12 @@
 :root {
     --bg-color-body: #011638;
-    --bg-color-header: #4e7a9e;
+    --bg-color-header: #9fd6d3;
     --text-color-header: #011638;
-    --text-color-body: #ef9597;
+    --text-color-body: #FAF0EF;
+    --text-color-second: #011638;
+    --bg-color-bar: #0C00F6;
     --bg-image: url(assets/fondodarkgif.gif);
-    --transition: color 0.1s, background-color 0.2s ease-in-out;
+    --transition: color 0.3s, background-color 0.4s ease-in-out;
 }
 
 *{
@@ -22,10 +24,12 @@ body{
 }
 
 body.dark{
-    --bg-color-body: #F7E1E7;
-    --bg-color-header: #ef9597;
-    --text-color-header: #F7E1E7;
+    --bg-color-body: #FAF0EF;
+    --bg-color-header: #ef978f;
+    --text-color-header: #FAF0EF;
     --text-color-body: #011638;
+    --text-color-second: #011638;
+    --bg-color-bar: #ED1E79;
     --bg-image: url(assets/fondolightgif.gif);
     --bg-perfil: url(assets/perfillight.png); 
     transition: var(--transition);
@@ -35,7 +39,7 @@ body.dark{
     margin: 0%;
     padding: 0%;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-flow: column wrap;
     background: var(--bg-image);
@@ -141,18 +145,26 @@ body.dark{
     color: var(--text-color-header);
     cursor: pointer;
     transition: var(--transition);
+    background-color: transparent;
+    position: relative;
 }
 
-.menu nav ul li a:hover {
-    color: var(--text-color-body);
-    transition: var(--transition);
+.menu nav ul li a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    background-color: var(--text-color-header);
+    transition: width 0.3s ease-in-out;
+}
+
+.menu nav ul li a:hover::after {
+    width: 100%;
 }
 
 #bt_menu{
-    display: none;
-}
-
-#btn_menu{
     display: none;
 }
 
@@ -201,13 +213,19 @@ body.dark{
 }
 
 #avatar-image{
-    width: 600px;
+    width: 700px;
     user-select: none;
 }
 
 /* Index Responsive*/
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1900px) {
+    
+    
+
+}
+
+@media screen and (max-width:1500px) {
     
     .logo{
         width: 120px;
@@ -216,6 +234,14 @@ body.dark{
     
     #palabrasheader{
         font-size: 13px;
+    }
+
+    #avatar-image{
+        width: 550px;
+    }
+    
+    .inicio-saludo{
+        font-size: 100px;
     }
 
 }
@@ -316,10 +342,6 @@ body.dark{
 }
 
 @media screen and (max-width:720px) {
-    
-    .argprog span{
-        display: none;
-    }
 
     .switches{
         margin-right: 20px;
