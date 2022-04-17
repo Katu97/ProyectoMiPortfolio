@@ -21,6 +21,7 @@ body{
     background-color: var(--bg-color-body);
     color: var(--text-color-body);
     transition: var(--transition);
+    display: block;
 }
 
 body.dark{
@@ -39,7 +40,7 @@ body.dark{
     margin: 0%;
     padding: 0%;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-flow: column wrap;
     background: var(--bg-image);
@@ -85,7 +86,7 @@ body.dark{
     margin-left: 10px;
 }
 
-.linea {
+.argprog div i{
     color: var(--text-color-header);
     height: 30px;
     border: 1px solid var(--text-color-header);
@@ -168,6 +169,8 @@ body.dark{
     display: none;
 }
 
+/*  INICIO  */
+
 .inicio {
     display: flex;
     flex-grow: 3;
@@ -218,12 +221,6 @@ body.dark{
 }
 
 /* Index Responsive*/
-
-@media screen and (max-width:1900px) {
-    
-    
-
-}
 
 @media screen and (max-width:1500px) {
     
@@ -356,6 +353,10 @@ body.dark{
         justify-content: flex-start;
     }
 
+    .inicio-escritura{
+        margin-bottom: 10%;
+    }
+
     #avatar{
         justify-content: center;
     }
@@ -372,4 +373,33 @@ body.dark{
         font-size: large;
     }
     
+}
+
+@media screen and (max-width:375px){
+    .argprog{
+        flex-direction: column;
+    }
+
+    .argprog a{
+        height: 40px;
+    }
+
+    .logo{
+        height: 40px;
+        margin-left: 0px;
+    }
+    
+    #palabrasheader{
+        font-size: 15px;
+        font-weight: 400;
+        margin-left: 0px;
+    }
+
+    .argprog div i{
+        display: none;
+    }
+
+    .inicio-escritura{
+        margin-bottom: 15%;
+    }
 }

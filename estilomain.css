@@ -10,6 +10,7 @@ main{
   padding:60px 20px 20px 20px;
   height: 100vh;
   width: 100%;
+  user-select: none;
 }
 
 .margenes2{
@@ -47,7 +48,7 @@ main{
   display: flex;
   justify-content: center;
   background-color: var(--bg-color-header);
-  width: 30%;
+  width: 35%;
   border-radius: 300px 300px 0 0;
 }
 
@@ -152,7 +153,8 @@ main{
 .division-año h2{
   font-family: 'Bebas Neue', cursive;
   margin: 2px;
-  color: var(--text-color-second);
+  color: var(--text-color-body);
+  transition: var(--transition);
 }
 
 /* EDUCACION - LINEA DE TIEMPO */
@@ -334,8 +336,9 @@ main{
 /* BARRAS DE PROGRESO */
 
 .container2 {
-  width: 550px;
+  width: 100%;
   margin: 0;
+  padding: 10px;
   text-align: center;
 }
 
@@ -366,7 +369,7 @@ main{
 
 .progress-bar {
   position: relative;
-  width: 550px;
+  width: 100%;
   box-sizing: border-box;
   font-family: 'Oswald', sans-serif;
   color: var(--text-color-body);
@@ -445,6 +448,7 @@ main{
   left: -20px;
   opacity: 0;
 }
+
 .progress-bar__skill--1.js-animated {
   transition-property: all;
   transition-duration: 0.2s;
@@ -460,6 +464,7 @@ main{
   right: -20px;
   opacity: 0;
 }
+
 .progress-bar__value--1.js-animated {
   transition-property: all;
   transition-duration: 0.2s;
@@ -503,12 +508,11 @@ main{
   width: 130px;
   margin: 20px;
   background-color: var(--bg-color-header);
- *background: radial-gradient(farthest-side circle at 70px 70px, var(--bg-color-bar), var(--bg-color-header));
+  /*background: radial-gradient(farthest-side circle at 70px 70px, var(--bg-color-bar), var(--bg-color-header));*/
   transition: var(--transition);
   border-radius: 100px;
   user-select: none;
 } 
-
 
 .logo-trabajo img{
   width: 70px;
@@ -541,8 +545,6 @@ main{
 
 
 
-
-
 /*  MAIN RESPONSIVE  */
 
 @media screen and (max-width:1500px) {
@@ -551,4 +553,239 @@ main{
     font-size: medium;
   }
 
+}
+
+@media screen and (max-width:720px){
+
+  .margenes{ 
+    padding:80px 20px 20px 20px;
+  }
+
+  .titulos{
+    font-size: 250%;
+    user-select: none;
+  }
+  
+  /* ACERCA DE MI */
+
+  .SobreMi-descripcion{
+    padding: 0;
+    margin: 0;
+  }
+
+  .SobreMi-div-perfil{
+    background-color: var(--bg-color-header);
+    width: 40%;
+    margin-bottom: 10%;
+    border-radius: 300px 300px 0 0;
+  }
+
+  .parrafos{
+    font-size: 100%;
+  }
+
+  /*  SKILLS  */
+
+  .Skills{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* BARRAS DE PROGRESO */
+  
+  .content2-block {
+    margin-top: 40px;
+  }
+  
+  .content2-block__effect {
+    margin-bottom: 40px;
+  }
+  
+  .progress-container2 {
+    margin-bottom: 30px;
+  }
+  
+  .progress-bar:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  
+  .progress-bar--lg-offset:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  /* EXPERIENCIA */
+
+  .logo-trabajo{
+    margin: 15% 0;
+  }
+  
+}
+
+@media screen and (max-width:375px){
+
+  .margenes{ 
+    padding:80px 10px 10px 10px;
+  }
+
+  .titulos{
+    font-size: 200%;
+    user-select: none;
+  }
+  
+  /* ACERCA DE MI */
+
+  .SobreMi{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .SobreMi-descripcion{
+    margin: 15px 15px 0px 15px;
+    width: 100%;
+  }
+
+  .SobreMi-div-perfil{
+    width: 44%;
+    margin-bottom: 0%;
+  }
+
+  .parrafos{
+    font-size: 90%;
+  }
+
+  .btn {
+    margin: 7px auto;
+  }
+
+  /* EDUCACION */
+
+  .division h2{
+    font-size: 65%;
+  }
+
+  .division-año{
+    font-size: 70%;
+  }
+
+  /* EDUCACION - LINEA DE TIEMPO */
+
+  .timeline {
+    max-width: 375px;
+    padding: 5px 0;
+  }
+
+  .container {
+    padding: 15px 30px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+  }
+
+  .container.left {
+    right: 0;
+    padding-left: 0px !important;
+  }
+
+  .container.right {
+    left: 50%;
+    padding-right: 0px !important;
+  }
+
+  .container .date {
+    width: 100%;
+    font-size: 80%;
+    margin: 0;
+
+  }
+
+  .container.left .date {
+    right: -180px;
+  }
+
+  .longg{
+    right: -185px !important;
+  }
+
+  .container.right .date {
+    left: -175px;
+  }
+
+  .long {
+    left: -170px !important;
+  }
+
+  .container .icon {
+    display: none;
+  }
+
+  .container .content {
+    padding: 10px;
+    border-radius: 0 50px 50px 0;
+  }
+
+  .container.right .content {
+    padding: 10px 0px 10px 20px;
+    border-radius: 50px 0 0 50px;
+    justify-content: flex-end;
+  }
+
+  .container .content h2 {
+    font-size: 15px;
+  }
+
+  .container .content p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 22px;
+    font-family: 'Oswald', sans-serif;
+    color: var(--text-color-second);
+    transition: var(--transition);
+  }
+  
+  .container::before {
+    width: 30px;
+  }
+
+  /* BARRAS DE PROGRESO */
+
+  .content2-block {
+    margin-top: 40px;
+  }
+
+  .content2-block__effect {
+    margin-bottom: 30px;
+  }
+
+  .progress-container2 {
+    margin-bottom: 20px;
+  }
+
+  /* EXPERIENCIA */
+
+  .Experiencia-contenedor{
+    justify-content: flex-start;
+    height: 50%;
+  }
+
+  .logo-trabajo{
+    margin: 28% 0;
+  } 
+
+  .logo-trabajo img{
+    width: 50px;
+  }
+
+  .Experiencia-seccion2 ul li, p{
+    font-size: 90%;
+  }
+
+  .Experiencia-subseccion p{
+    font-size: small;
+  }
+
+  .trabajo h2{
+    font-size: large;
+  }
+  
 }
